@@ -1,0 +1,156 @@
+body {
+  background: #cfd8dc;
+  min-height: 100vh!important;
+  font-family: 'IBM Plex Mono', monospace;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+.container {
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+  justify-content: center;
+  align-items: center; 
+}
+
+#calculator {
+  font-weight: 400;
+  color: #616161;
+  height: 80vh;
+  width: 50vh;
+  padding: 30px 15px;
+  /* margin: 0 auto; */
+}
+
+#calculator>div{
+  align-items: stretch;
+  align-self:stretch;
+}
+
+/* --- Screen --- */
+#calc-top {
+  max-height: 50%;
+}
+
+#calc-screen {
+  height: 100%;
+  justify-content: flex-end;
+}
+
+#calc-screen p {
+  text-align: right;
+  padding: 0 15px 15px;
+  margin:0;
+}
+
+#calc-screen p:last-child {
+  margin-bottom: 15px!important;
+}
+
+.calc-on-screen {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.calc-operation, .calc-past-result {
+  color: #90a4ae;
+}
+
+.calc-past-result {
+  font-weight: 900;
+}
+
+/* ---Top Buttons --- */
+
+#graidient-buttons * {
+  font-size: 24px;
+  margin: 1px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin: 15px 15px 30px;
+  background: linear-gradient(135deg, #ECE5DB 0%, #D5C6B4 90%);
+  box-shadow: -5px -15px 30px rgba(236,229,219, .4), 5px 15px 30px rgba(213,198,181, .6),inset -1px -1px 2px rgba(209, 209, 209, 0.25), inset 1px 1px 2px rgba(255, 255, 255, 0.5);
+  border-radius: 100%;
+  width: 150%;
+  z-index: 20;
+}
+
+#graidient-buttons *:hover {
+  box-shadow: -5px -15px 40px rgba(236,229,219, .4), 5px 15px 40px rgba(213,198,181, .6);
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+#graidient-buttons *:active {
+  transform: scale(0.98);
+  box-shadow: -5px -15px 20px rgba(236,229,219, .4), 5px 15px 20px rgba(213,198,181, .6);
+}
+
+#graidient-buttons *:after { /* ---  --- */
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+/* --- Bottom Buttons --- */
+
+#calc-buttons .op-button, #calc-buttons .num-button {
+  font-size: 24px;
+  margin: 1px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+#calc-buttons .op-button:hover, #calc-buttons .num-button:hover{
+  font-size: 24px;
+  color: #50646F;
+  margin: 1px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  box-shadow: 10px 10px 15px rgba(55, 84, 170, 0.1), -10px -10px 15px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  z-index: 0;
+}
+
+#calc-buttons .op-button:active, #calc-buttons .num-button:active {
+  transform: scale(0.98);
+  box-shadow: 10px 10px 8px rgba(55, 84, 170, 0.1), -10px -10px 8px rgba(255, 255, 255, 0.2);
+}
+
+.last-line * {
+  height: 100%;
+}
+
+.num-button {
+  background:#eceff1;
+}
+
+.op-button {
+  background:#F6F7F9;
+}
+
+/* Larger than mobile */
+@media (max-width: 400px) {
+  
+  .container {
+    height: auto;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #calculator {
+    width: 100vw;
+    align-items: stretch;
+    margin: 0;
+    border-radius: 0;
+  }
+}
