@@ -1,0 +1,13 @@
+/* Transition
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+*, *:after, *:before {
+  -webkit-transition: .15s;
+  transition: .15s;
+}
+
+/* Box Size Fixed
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
